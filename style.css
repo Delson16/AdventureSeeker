@@ -1,0 +1,302 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    /* border: solid 1px red; */
+}
+:root {
+    --cor-1: #FF6600;
+    --cor-2: #D3D3D3;
+    --cor-3: #fff;
+}
+main{
+    margin-bottom: 1000px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden;
+}
+
+/* ----------------- HEADER -------------------- */
+header{
+    width: 100vw;
+    height: 15vh;
+    padding: 20px 20px;
+    display: flex;
+    column-gap: 20px;
+    background-color: var(--cor-1);
+    color: var(--cor-3);
+    align-items: center;
+    font-size: 1.1em;
+}
+h1{
+    font-weight: 500;
+}
+header img{
+    height: 3.5em;
+    width: 3.5em;
+    border-radius: 6px;
+    background-color: var(--cor-3);
+    padding: 5px;
+}
+/* ----------------- HEADER -------------------- */
+
+/* ----------------- SESSÃO-1 -------------------- */
+main{
+    color: var(--cor-3);
+    text-shadow: 5px 5px 10px #000000ec;
+}
+.paralax-1{
+    font-size: 1.7em;
+    width: 100vw;
+    height: 85vh;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url(img/fundo.jpg);
+}
+h2{
+    font-weight: 600;
+}
+.paralax-1 a{
+    background-color: #fff;
+    text-decoration: none;
+    color: var(--laranja-por-do-sol);
+    width: fit-content;
+    justify-self: center;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+    font-weight: 700;
+    color: var(--cor-1);
+    text-shadow: none;
+    font-size: .6em;
+}
+/* ----------------- SESSÃO-1 -------------------- */
+
+/* ----------------- SESSÃO-INTRO -------------------- */
+.modulo{
+    background-color: var(--cor-1);
+    padding: 70px 13%;
+}
+.modulo h2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2em;
+}
+p{
+    font-size: 1.25em;
+}
+/* ----------------- SESSÃO-INTRO -------------------- */
+/* ----------------- SESSÃO-ROMA -------------------- */
+
+.paralax{
+    font-size: 1.7em;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.paralax-2{
+    background-image: url(img/fundo-2.jpg);
+}
+.section{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(img/coliseu-2.jpeg);
+    width: 50%;
+    height: 100%;
+}
+.txt{
+    width: 50%;
+    background-color: var(--cor-1);
+    padding: 40px 50px 40px 30px;
+}
+.txt h2{
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    border-bottom: .5px solid var(--cor-3);
+    width: fit-content;
+}
+.paragrafo{
+    height: 45vh;
+}
+.txt p{
+    font-size: .95em;
+    text-indent: 30px;
+    text-align: justify;
+    margin-bottom: 15px;
+    text-shadow: none;
+}
+#readButton{
+    display: none;
+}
+.botao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    row-gap: 10px;
+}
+input{
+    background-color: var(--cor-1);
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    font-weight: 700;
+    color: var(--cor-3);
+    text-shadow: none;
+    font-size: 1em;
+    border: 1px solid var(--cor-3);
+    transition: .3s ease;
+}
+input:hover{
+    background-color: var(--cor-3);
+    color: var(--cor-1);
+    cursor: pointer;
+}
+input:active{
+    scale: 0.95;
+}
+/* ----------------- SESSÃO-ROMA -------------------- */
+
+@media screen and (max-width: 800px){
+    header{
+        height: 10vh;
+    }
+    .paralax-1{
+        height: 90vh;
+    }
+    section{
+        flex-direction: column;
+    }
+    .img, .txt{
+        width: 100%;
+    }
+    .paragrafo{
+        height: 20vh;
+        font-size: 1.4em;
+    }
+    .img{
+        height: 40vh;
+    }
+    .txt{
+        height: 60vh;
+    }
+    .botao{
+
+    }
+
+}
+@media screen and (max-width: 360px) {
+    header{
+        font-size: .5em;
+    }
+    .paralax-1{
+        text-align: center;
+    }
+    .modulo{
+        padding: 70px 5%;
+    }
+    .modulo h2{
+        font-size: 1.5em;
+    }
+    .section{
+        height: auto;
+    }
+    .img{
+        height: 30vh;
+    }
+     .txt{
+        height: 70vh;
+        padding: 0px 0px 40px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .txt h2{
+        text-align: center;
+        text-shadow: none;
+        border: none;
+    }
+    .txt p{
+        padding: 0px 50px 0px 30px;
+    }
+    .paragrafo{
+        height: 40vh;
+        overflow: hidden;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .paragrafo::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, var(--cor-1));
+    }
+    .botao{
+        flex-direction: row;
+        font-size: .55em;
+        margin-top: 0px;
+        order: -1;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    input{
+        width: 33.333333333333%;
+        border-radius: 0;
+    }
+    .inicio{
+        border-bottom: none;
+    }
+    input:active{
+        scale: 1;
+    }
+    #readButton{
+    display: block;
+    background-color: #ffffff;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    color: var(--cor-1);
+    text-shadow: none;
+    font-size: 1em;
+    border: none;
+    margin: auto;
+    transition: all 0.1s ease-in-out;
+    }
+    #readButton:active{
+        background-color: transparent;
+        color: var(--cor-3);
+        transition: all 0.1s ease-in-out;
+    }
+    .txt.active, .paragrafo.active{
+        height: auto;
+    }
+    .paragrafo.active::before{
+        visibility: hidden;
+    }
+}
