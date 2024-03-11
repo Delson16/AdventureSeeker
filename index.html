@@ -2,6 +2,9 @@
 <html lang="pt-br">
 
 <head>
+    <link rel="icon iconcut" href="img/voar.png">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
@@ -24,111 +27,83 @@
             <h2>Conheça novos horizontes</h2>
             <a href="#intro">Explore agora</a>
         </div>
-        <div class="modulo">
+        <div class="modulo" id="intro">
             <h2>Conheça lugares incríveis com a Seeker!</h2>
-            <p>Procurar por bons destinos de viagem não é tarefa fácil, concorda? Mas relaxe, nós já fizemos esse
-                trabalho para você! A seguir, vamos te mostrar lugares com paisagens incríveis que você vai desejar
-                visitar. Prepare-se para se inspirar e embarcar em aventuras memoráveis!</p>
+            <p>Neste espaço, apresentaremos três destinos cativantes ao redor do mundo: Kyoto no Japão, Nova York e Roma. Cada um desses lugares oferece uma experiência única e inesquecível, repleta de história, cultura e belezas distintas. Vamos explorar juntos as maravilhas desses destinos fascinantes.</p>
         </div>
         <div class="paralax paralax-2">
-            <h2>ROMA</h2>
+            <h2 data-aos="zoom-in">ROMA</h2>
         </div>
         <section class="section">
-            <div class="img"></div>
+            <div class="img img-1"></div>
             <div class="txt">
                 <h2 class="titulo">História e Cultura Milenar</h2>
                 <div class="paragrafo">
                     <p>A cidade de Roma é um tesouro vivo da história e da cultura milenar, onde cada rua e cada monumento conta uma história fascinante. Do imponente Coliseu, que ecoa os rugidos das multidões dos antigos espetáculos de gladiadores, ao majestoso Vaticano, lar da Igreja Católica e suas obras de arte renascentistas, cada passo em Roma é uma jornada no tempo. Através de museus repletos de tesouros arqueológicos e igrejas adornadas com afrescos de mestres como Michelangelo e Rafael, os visitantes têm a oportunidade de testemunhar em primeira mão a grandeza e a influência duradoura do Império Romano e da civilização ocidental.</p>
                 </div>
-                <button id="readButton">Ler mais</button>
+                <button class="readButton" onclick="lerMais(0)">Ler mais</button>
                 <div class="botao">
-                    <input type="button" value="Cultura Milenar" class="inicio" onclick="mostrarTexto('text1', 1)">
+                    <input type="button" value="Cultura Milenar"  onclick="mostrarTexto('text1', 1)">
                     <input type="button" value="Culinária Italiana" onclick="mostrarTexto('text2', 1)">
                     <input type="button" value="Atmosfera Romântica" onclick="mostrarTexto('text3', 1)">
                 </div>
             </div>
         </section>
+        <div class="paralax paralax-3">
+            <h2 data-aos="zoom-in">NOVA YORK</h2>
+        </div>
+        <section class="section">
+            <div class="img img-2"></div>
+            <div class="txt">
+                <h2 class="titulo">Diversidade e Energia</h2>
+                <div class="paragrafo">
+                    <p>Nova York é uma cidade que pulsa com uma energia única e uma mistura de culturas que a torna verdadeiramente especial. Desde os arranha-céus imponentes de Manhattan até os bairros ecléticos do Brooklyn, cada parte da cidade possui uma atmosfera distinta e vibrante. Passear pelas ruas movimentadas de Nova York é como fazer uma viagem ao redor do mundo, com uma infinidade de restaurantes, lojas e eventos culturais que refletem a diversidade e a criatividade da cidade.</p>
+                </div>
+                <button class="readButton" onclick="lerMais(1)">Ler mais</button>
+                <div class="botao">
+                    <input type="button" value="Diversidade e Energia"  onclick="mostrarTexto('text1', 2)">
+                    <input type="button" value="Arquitetura Urbana" onclick="mostrarTexto('text2', 2)">
+                    <input type="button" value="Cultura e Entretenimento" onclick="mostrarTexto('text3', 2)">
+                </div>
+            </div>
+        </section>
+        <div class="paralax paralax-4">
+            <h2 data-aos="zoom-in">KIOTO</h2>
+        </div>
+        <section class="section">
+            <div class="img img-3"></div>
+            <div class="txt">
+                <h2 class="titulo">Tradição e Espiritualidade</h2>
+                <div class="paragrafo">
+                    <p>Kyoto é um santuário da tradição e espiritualidade japonesas, onde templos antigos e jardins zen refletem séculos de história e cultura. A cidade é famosa por seus templos históricos, como o Kinkaku-ji (Pavilhão Dourado) e o Kiyomizu-dera, que oferecem aos visitantes uma visão única da arquitetura e das práticas religiosas do Japão. Além disso, os festivais sazonais e as cerimônias de chá oferecem uma oportunidade para os visitantes experimentarem a serenidade e a beleza da cultura japonesa tradicional.</p>
+                </div>
+                <button class="readButton" onclick="lerMais(2)">Ler mais</button>
+                <div class="botao">
+                    <input type="button" value="Espiritualidade"  onclick="mostrarTexto('text1', 3)">
+                    <input type="button" value="Natureza e Serenidade" onclick="mostrarTexto('text2', 3)">
+                    <input type="button" value="Tradições Artesanais" onclick="mostrarTexto('text3', 3)">
+                </div>
+            </div>
+        </section>
+        <div class="paralax paralax-5">
+        </div>
+        <div class="modulo">
+            <h2>Obrigado por Nos Acompanhar</h2>
+            <p>Agradeço por explorar conosco os encantos de Roma, Nova York e Kyoto. Esperamos que cada uma dessas cidades tenha despertado sua curiosidade e encantado seus sentidos, oferecendo uma experiência única e inesquecível. Que as histórias compartilhadas e os destinos apresentados inspirem suas próximas aventuras e o levem a descobrir novos horizontes ao redor do mundo. Obrigado por sua visita e até breve!</p>
+        </div>
+        <footer>
+            <p>&copy; <b><i>Delson Pilar</i></b> | Março de 2024</p>
+            <a href="https://github.com/Delson16">Github</a>
+            <a href="https://www.linkedin.com/in/delson-dubal-pilar-2132a32b3/">Linkedin</a>
+        </footer>
 
 
     </main>
 
-    <!-- <main>
-        <div class="paralax paralax-1">
-            <h2>Conheça novos horizontes</h2>
-            <a href="#intro">Explore agora</a>
-        </div>
-
-        <div class="modulo" id="intro">
-            <h2>Conheça lugares incríveis com a Seeker!</h2>
-            <p>Procurar por bons destinos de viagem não é tarefa fácil, concorda? Mas relaxe, nós já fizemos esse trabalho para você! A seguir, vamos te mostrar lugares com paisagens incríveis que você vai desejar visitar. Prepare-se para se inspirar e embarcar em aventuras memoráveis!</p>
-        </div>
-        <div class="paralax paralax-2">
-            <h2>ROMA</h2>
-        </div>
-
-        <div class="conteudo">
-            <div class="paralax-3 paralax-lateral">
-                <div class="icons">
-                    <div class="icon"><img src="" alt=""></div>
-                </div>
-                <span>Coliseu de roma</span>
-            </div>
-            <div class="content">
-                <h2>Um passeio na história</h2>
-                <p>Bem-vindo a uma jornada fascinante pelas ruas antigas e monumentos grandiosos de Roma, a cidade eterna que respira história em cada esquina. Prepare-se para se maravilhar com a grandiosidade de séculos de história e cultura enquanto exploramos alguns dos lugares mais emblemáticos desta cidade única</p>
-                <p>À medida que caminhamos pelas ruas de paralelepípedos, somos transportados para o passado glorioso de Roma, onde cada pedra conta uma história e cada ruína ecoa os suspiros dos antigos romanos. Os imponentes edifícios e as majestosas colunas nos lembram da grandeza de um império que dominou o mundo conhecido.</p>
-                <p>Não é apenas a arquitetura imponente que nos cativa, mas também a atmosfera vibrante e pulsante que permeia a cidade. Nas praças movimentadas, entre o aroma tentador das trattorias e o som de músicos de rua talentosos, podemos sentir a energia contagiante de uma cidade que nunca dorme.</p>
-            </div>
-        </div>
-
-    </main> -->
-
     <script src="main.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div class="modulo">
-            <h2>Um passeio na história</h2>
-            <div class="content">
-                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://images.prismic.io/mystique/5fa8d332-02e9-4b51-9d05-b86292be3f06_cd2b20cb-1b9d-415f-832b-c36e32640bb0-15936-rome-colosseum.jpeg?auto=compress,format&rect=0,0,1600,1000&w=1600&h=1000" class="d-block w-100" alt="coliseu">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://mb.web.sapo.io/1526b1640916377984ea6a1172baf0e9b13df6ba.jpg" class="d-block w-100" alt="Panteão">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://cdn.pixabay.com/photo/2021/05/10/22/06/rome-6244458_1280.jpg" class="d-block w-100" alt="castelo">
-                      </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                <p>Bem-vindo a uma jornada fascinante pelas ruas antigas e monumentos grandiosos de Roma, a cidade eterna que respira história em cada esquina. Prepare-se para se maravilhar com a grandiosidade de séculos de história e cultura enquanto exploramos alguns dos lugares mais emblemáticos desta cidade única.</p>
-            </div>
-        </div> -->
