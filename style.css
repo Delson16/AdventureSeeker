@@ -12,7 +12,8 @@
     --cor-3: #fff;
 }
 main{
-    margin-bottom: 1000px;
+    color: var(--cor-3);
+    text-shadow: 5px 5px 10px #000000ec;
 }
 html{
     scroll-behavior: smooth;
@@ -43,13 +44,8 @@ header img{
     background-color: var(--cor-3);
     padding: 5px;
 }
-/* ----------------- HEADER -------------------- */
 
-/* ----------------- SESSÃO-1 -------------------- */
-main{
-    color: var(--cor-3);
-    text-shadow: 5px 5px 10px #000000ec;
-}
+/* ----------------- estrutura da introdução (primeiro paralax e modulo) -------------------- */
 .paralax-1{
     font-size: 1.7em;
     width: 100vw;
@@ -70,7 +66,6 @@ h2{
 .paralax-1 a{
     background-color: #fff;
     text-decoration: none;
-    color: var(--laranja-por-do-sol);
     width: fit-content;
     justify-self: center;
     padding: 10px;
@@ -81,9 +76,6 @@ h2{
     text-shadow: none;
     font-size: .6em;
 }
-/* ----------------- SESSÃO-1 -------------------- */
-
-/* ----------------- SESSÃO-INTRO -------------------- */
 .modulo{
     background-color: var(--cor-1);
     padding: 70px 13%;
@@ -96,8 +88,7 @@ h2{
 p{
     font-size: 1.25em;
 }
-/* ----------------- SESSÃO-INTRO -------------------- */
-/* ----------------- SESSÃO-ROMA -------------------- */
+/* ----------------- estrutura das sessões -------------------- */
 
 .paralax{
     font-size: 1.7em;
@@ -111,9 +102,6 @@ p{
     background-size: cover;
     background-attachment: fixed;
 }
-.paralax-2{
-    background-image: url(img/fundo-2.jpg);
-}
 .section{
     display: flex;
     height: 100vh;
@@ -123,7 +111,6 @@ p{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(img/coliseu-2.jpeg);
     width: 50%;
     height: 100%;
 }
@@ -139,7 +126,7 @@ p{
     width: fit-content;
 }
 .paragrafo{
-    height: 45vh;
+    height: 40vh;
 }
 .txt p{
     font-size: .95em;
@@ -148,14 +135,13 @@ p{
     margin-bottom: 15px;
     text-shadow: none;
 }
-#readButton{
+.readButton{
     display: none;
 }
 .botao{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 15px;
     row-gap: 10px;
 }
 input{
@@ -178,9 +164,59 @@ input:hover{
 input:active{
     scale: 0.95;
 }
-/* ----------------- SESSÃO-ROMA -------------------- */
+/* ----------------- Imagens de roma -------------------- */
+.paralax-2{
+    background-image: url(img/fundo-2.jpg);
+}
+.img-1{
+    background-image: url(https://cdn.pixabay.com/photo/2022/06/06/20/48/rome-7246962_1280.jpg);
+}
+/* ----------------- imagens de Nova York -------------------- */
+.paralax-3{
+    background-image: url(https://cdn.pixabay.com/photo/2020/02/16/20/29/nyc-4854718_1280.jpg);
+}
+.img-2{
+    background-image: url(https://images.pexels.com/photos/18012331/pexels-photo-18012331/free-photo-of-estatua-da-liberdade.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+}
 
-@media screen and (max-width: 800px){
+/* ----------------- Imagens de Kioto -------------------- */
+.paralax-4{
+    background-image: url(https://cdn.pixabay.com/photo/2015/10/17/18/57/kyoto-993058_1280.jpg);
+}
+.img-3{
+    background-image: url(https://cdn.pixabay.com/photo/2016/03/01/00/59/kyoto-1229561_1280.jpg);
+
+}
+/* Imagem de conclusão */
+.paralax-5{
+    background-image: url(https://cdn.pixabay.com/photo/2019/12/20/00/03/road-4707345_1280.jpg);
+}
+/* ----------------- Footer -------------------- */
+
+footer{
+    width: 100vw;
+    height: 150px;
+    background-color: #2c2c2c;
+    padding: 30px;
+    color: var(--cor-3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: var(--cor-3);
+    font-size: 1.2em;
+}
+footer a:hover{
+    text-shadow: 0px 0px 10px var(--cor-1);
+    color: #FF6600;
+}
+/* Responsividade */
+@media screen and (max-width: 850px){
     header{
         height: 10vh;
     }
@@ -196,6 +232,7 @@ input:active{
     .paragrafo{
         height: 20vh;
         font-size: 1.4em;
+        margin-bottom: 50px;
     }
     .img{
         height: 40vh;
@@ -203,12 +240,9 @@ input:active{
     .txt{
         height: 60vh;
     }
-    .botao{
-
-    }
 
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 450px) {
     header{
         font-size: .5em;
     }
@@ -240,7 +274,9 @@ input:active{
         border: none;
     }
     .txt p{
-        padding: 0px 50px 0px 30px;
+        padding: 0px 15px 0px 15px;
+        text-align: left;
+        text-indent: 0px;
     }
     .paragrafo{
         height: 40vh;
@@ -267,14 +303,9 @@ input:active{
     input{
         width: 33.333333333333%;
         border-radius: 0;
-    }
-    .inicio{
         border-bottom: none;
     }
-    input:active{
-        scale: 1;
-    }
-    #readButton{
+    .readButton{
     display: block;
     background-color: #ffffff;
     width: fit-content;
@@ -300,3 +331,30 @@ input:active{
         visibility: hidden;
     }
 }
+@keyframes titulo {
+    from{
+        opacity: 0;
+        transform: translatex(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translatex(0);
+    } 
+}
+@keyframes texto {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    } 
+}
+.animation{
+    animation: texto 1s ease forwards;
+}
+.animation-titulo{
+    animation: titulo 1s ease forwards;
+}
+
