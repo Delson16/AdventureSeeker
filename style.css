@@ -248,6 +248,7 @@ footer a:hover{
     }
     .paralax-1{
         text-align: center;
+        background-image: url(img/fundo-cell.jpg);
     }
     .modulo{
         padding: 70px 5%;
@@ -330,6 +331,9 @@ footer a:hover{
     .paragrafo.active::before{
         visibility: hidden;
     }
+    .paralax-2{
+        background-image: url(img/fundo-2-cell.jpg);
+    }
 }
 @keyframes titulo {
     from{
@@ -357,4 +361,3 @@ footer a:hover{
 .animation-titulo{
     animation: titulo 1s ease forwards;
 }
-
